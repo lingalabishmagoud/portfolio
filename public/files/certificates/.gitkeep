@@ -1,0 +1,8 @@
+# This file ensures the certificates directory is tracked by Git
+# You can delete this file once you add your actual certificates
+
+# Add your certificates here:
+# - google-cybersecurity-certificate.pdf
+# - btech-degree-certificate.pdf
+# - intermediate-certificate.pdf
+# - workshop-certificates.pdf
