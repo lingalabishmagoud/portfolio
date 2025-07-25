@@ -81,7 +81,7 @@ export default function Skills() {
             My <span className="text-primary">Skills</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are the technologies and skills I've been working with
+            Here are the technologies and skills I&apos;ve been working with
           </p>
         </motion.div>
 
@@ -160,7 +160,7 @@ export default function Skills() {
               Always Learning
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              I'm constantly expanding my skill set and staying up-to-date with the latest 
+              I&apos;m constantly expanding my skill set and staying up-to-date with the latest
               technologies. Currently exploring advanced React concepts, Node.js backend 
               development, and advanced cybersecurity practices to become a well-rounded 
               full-stack developer.

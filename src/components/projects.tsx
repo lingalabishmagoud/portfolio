@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Users, Calendar, Code, Database } from "lucide-react";
+import { ExternalLink, Github, Calendar, Code, Database } from "lucide-react";
 
 export default function Projects() {
   const projects = [
@@ -59,7 +59,7 @@ export default function Projects() {
             My <span className="text-primary">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of the projects I've worked on that showcase my skills and experience
+            Here are some of the projects I&apos;ve worked on that showcase my skills and experience
           </p>
         </motion.div>
 

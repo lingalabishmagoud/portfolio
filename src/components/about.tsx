@@ -108,28 +108,28 @@ export default function About() {
             
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a passionate Computer Science undergraduate specializing in Cybersecurity 
+                I&apos;m a passionate Computer Science undergraduate specializing in Cybersecurity
                 at Sphoorthy Engineering College, Hyderabad. With a strong foundation in 
-                frontend development and web technologies, I'm dedicated to creating 
+                frontend development and web technologies, I&apos;m dedicated to creating
                 responsive and user-friendly web applications.
               </p>
               
               <p>
                 My journey in technology began with a curiosity about how websites work, 
                 which led me to master HTML, CSS, JavaScript, and modern frameworks like 
-                Bootstrap. I'm proficient in multiple programming languages including 
+                Bootstrap. I&apos;m proficient in multiple programming languages including
                 Python, Java, C, and PHP.
               </p>
               
               <p>
-                As the Vice President of the Cyber GenZ Club at my college, I've organized 
+                As the Vice President of the Cyber GenZ Club at my college, I&apos;ve organized
                 multiple cybersecurity workshops for over 150 students, promoting 
                 student-led learning in AI and tech innovation. I believe in collaborative 
                 coding and the power of teamwork to solve complex problems.
               </p>
               
               <p>
-                I'm excited about gaining real-world experience and contributing to 
+                I&apos;m excited about gaining real-world experience and contributing to
                 innovative projects in a flexible remote environment. My goal is to 
                 bridge the gap between cybersecurity and web development, creating 
                 secure and efficient digital solutions.

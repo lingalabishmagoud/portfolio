@@ -57,7 +57,7 @@ export default function Contact() {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Connect with me through any of the platforms below. I'm always excited to discuss new opportunities,
+            Connect with me through any of the platforms below. I&apos;m always excited to discuss new opportunities,
             collaborate on projects, or just have a chat about technology and development!
           </p>
         </motion.div>
@@ -72,7 +72,7 @@ export default function Contact() {
             className="text-center"
           >
             <h3 className="text-2xl font-bold text-foreground mb-8">
-              Let's Connect
+              Let&apos;s Connect
             </h3>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">

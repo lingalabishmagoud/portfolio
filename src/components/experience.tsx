@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, MapPin, Award, Users, Shield, Code, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, Award, Users, Shield, Code, ExternalLink } from "lucide-react";
 
 export default function Experience() {
   const experiences = [

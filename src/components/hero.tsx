@@ -91,7 +91,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6"
           >
-            <span className="text-foreground">Hi, I'm </span>
+            <span className="text-foreground">Hi, I&apos;m </span>
             <span className="text-primary">Lingala Bishma Goud</span>
           </motion.h1>
 
@@ -102,7 +102,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8"
           >
-            <span>I'm a </span>
+            <span>I&apos;m a </span>
             <motion.span
               className="text-primary font-semibold"
               initial={{ opacity: 0 }}
@@ -169,7 +169,7 @@ export default function Hero() {
               { icon: Linkedin, href: "https://www.linkedin.com/in/lingala-bishma-goud", label: "LinkedIn" },
               { icon: Instagram, href: "https://www.instagram.com/bishmalingalagoud?igsh=YnVrY3g3bjdyOGx2", label: "Instagram" },
               { icon: Mail, href: "#contact", label: "Email" },
-            ].map((social, index) => {
+            ].map((social) => {
               const Icon = social.icon;
               const isEmail = social.label === "Email";
 
