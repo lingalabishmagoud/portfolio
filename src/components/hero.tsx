@@ -16,20 +16,25 @@ export default function Hero() {
       });
     };
 
-    // Set initial size
-    handleResize();
+    // Only run on client side
+    if (typeof window !== 'undefined') {
+      // Set initial size
+      handleResize();
 
-    // Add event listener
-    window.addEventListener('resize', handleResize);
+      // Add event listener
+      window.addEventListener('resize', handleResize);
 
-    // Cleanup
-    return () => window.removeEventListener('resize', handleResize);
+      // Cleanup
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   const scrollToNext = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
+    if (typeof document !== 'undefined') {
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -179,9 +184,11 @@ export default function Hero() {
                   href={social.href}
                   onClick={isEmail ? (e) => {
                     e.preventDefault();
-                    const contactSection = document.getElementById("contact");
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: "smooth" });
+                    if (typeof document !== 'undefined') {
+                      const contactSection = document.getElementById("contact");
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: "smooth" });
+                      }
                     }
                   } : undefined}
                   target={isEmail ? undefined : "_blank"}
