@@ -6,63 +6,52 @@ import { Calendar, MapPin, Award, Users, Shield, Code, ExternalLink } from "luci
 export default function Experience() {
   const experiences = [
     {
+      title: "Frontend Developer Intern",
+      company: "Indolike",
+      location: "Remote",
+      period: "Sep 2025 - Present",
+      type: "Internship",
+      description: "Developing responsive web interfaces and reusable UI components. Collaborating with designers and backend developers to deliver scalable full-stack solutions.",
+      achievements: [
+        "Developing responsive web interfaces",
+        "Building reusable UI components",
+        "Collaborating with designers and backend teams",
+        "Delivering scalable full-stack solutions"
+      ],
+      skills: ["Frontend Development", "Component Architecture", "Collaboration", "Responsive Design"],
+      icon: Code
+    },
+    {
       title: "Vice President",
-      company: "Cyber GenZ Club",
-      location: "Sphoorthy Engineering College, Hyderabad",
+      company: "Tech GenZ Club",
+      location: "Sphoorthy Engineering College",
       period: "2023 - Present",
       type: "Leadership Role",
-      description: "Leading cybersecurity initiatives and promoting student-led learning in AI and tech innovation.",
+      description: "Leading technology initiatives and promoting student-led learning in AI, Web Development, and Mobile App innovation.",
       achievements: [
-        "Organized 5+ cybersecurity workshops for 150+ students",
-        "Promoted student-led learning in AI and tech innovation",
-        "Built strong community of cybersecurity enthusiasts",
-        "Coordinated with industry experts for guest lectures",
-        "Managed club activities and events planning"
+        "Organized 5+ tech & development workshops for 150+ students",
+        "Promoted student-led learning in AI and app innovation",
+        "Fostered Web Development and Android ecosystem growth",
+        "Managed club activities and technical event planning"
       ],
       skills: ["Leadership", "Event Management", "Public Speaking", "Team Coordination"],
       icon: Users
-    },
-    {
-      title: "Cybersecurity Virtual Intern",
-      company: "AICTE/Edunet Foundation",
-      location: "Remote",
-      period: "Jun 2023 - Jul 2023",
-      type: "Virtual Internship",
-      description: "Gained hands-on experience in cybersecurity practices, ethical hacking, and secure web development.",
-      achievements: [
-        "Practiced ethical hacking techniques in controlled environments",
-        "Learned bug tracing and vulnerability assessment methods",
-        "Applied secure web coding practices",
-        "Used version control systems for collaborative development",
-        "Implemented defensive programming techniques",
-        "Completed comprehensive cybersecurity training modules"
-      ],
-      skills: ["Ethical Hacking", "Vulnerability Assessment", "Secure Coding", "Git", "Defensive Programming"],
-      icon: Shield
     }
   ];
 
   const certifications = [
     {
-      title: "Foundations of Cybersecurity",
-      issuer: "Google/Coursera",
-      date: "2023",
-      description: "Comprehensive course covering cybersecurity fundamentals, threat analysis, and security frameworks.",
-      skills: ["Cybersecurity Fundamentals", "Risk Assessment", "Security Frameworks"],
-      certificateUrl: "/files/certificates/Coursera DWH25PV74C4N.pdf"
-    },
-    {
-      title: "Cybersecurity Virtual Intern Certificate",
-      issuer: "AICTE/Edunet Foundation",
-      date: "Jun 2023 - Jul 2023",
-      description: "Completed comprehensive cybersecurity virtual internship program covering ethical hacking, vulnerability assessment, and secure coding practices.",
-      skills: ["Ethical Hacking", "Vulnerability Assessment", "Secure Coding", "Cybersecurity Fundamentals"],
-      certificateUrl: "/files/certificates/AICTE PBLD 2001-4K-493.pdf"
+      title: "Frontend Developer Certificate",
+      issuer: "HackerRank",
+      date: "2025",
+      description: "Demonstrated competency in frontend development techniques, styling, and modern responsive design best practices.",
+      skills: ["Frontend", "React", "CSS", "Problem Solving"],
+      certificateUrl: "#"
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-background">
+    <section id="experience" className="py-20 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -90,9 +79,10 @@ export default function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="relative"
+                whileHover={{ y: -5, scale: 1.02, rotateX: 2, rotateY: index % 2 === 0 ? 2 : -2 }}
+                className="relative perspective-1000 transform-style-3d"
               >
-                <div className="bg-card rounded-xl p-8 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
+                <div className="glass-panel p-8 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,243,255,0.2)] border-t border-l border-white/20 rounded-3xl">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     {/* Icon and Timeline */}
                     <div className="flex-shrink-0">
@@ -186,7 +176,7 @@ export default function Experience() {
           <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
             <span className="text-primary">Certifications</span>
           </h3>
-          
+
           <div className="grid md:grid-cols-1 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
@@ -195,7 +185,7 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-6 border border-primary/20"
+                className="glass-panel p-6 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(0,243,255,0.2)] transition-all duration-300"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                   <div>
@@ -204,7 +194,7 @@ export default function Experience() {
                   </div>
                   <span className="text-muted-foreground text-sm mt-2 sm:mt-0">{cert.date}</span>
                 </div>
-                
+
                 <p className="text-muted-foreground mb-4">{cert.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">

@@ -11,21 +11,21 @@ export default function Education() {
       location: "Hyderabad, India",
       period: "2022 - 2026",
       status: "Currently Pursuing",
-      gpa: "In Progress",
-      description: "Specializing in Cybersecurity with a strong foundation in computer science fundamentals, programming, and security practices.",
+      gpa: "8.09 CGPA",
+      description: "Focusing on Software Architecture with a strong foundation in computer science fundamentals, programming, and web/mobile development practices.",
       subjects: [
         "Data Structures & Algorithms",
         "Computer Networks",
-        "Cybersecurity Fundamentals",
+        "Frontend Architecture",
         "Web Development",
         "Database Management Systems",
         "Software Engineering",
-        "Ethical Hacking",
-        "Cryptography"
+        "Android App Development",
+        "Object Oriented Programming"
       ],
       achievements: [
-        "Vice President of Cyber GenZ Club",
-        "Organized 5+ cybersecurity workshops",
+        "Vice President of Tech GenZ Club",
+        "Organized 5+ tech & development workshops",
         "Active participant in coding competitions",
         "Strong academic performance"
       ]
@@ -40,7 +40,7 @@ export default function Education() {
       description: "Completed intermediate education with Mathematics, Physics, and Chemistry, building a strong foundation for engineering studies.",
       subjects: [
         "Mathematics",
-        "Physics", 
+        "Physics",
         "Chemistry",
         "English",
         "Computer Science"
@@ -78,7 +78,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 bg-background/50">
+    <section id="education" className="py-20 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -103,7 +103,8 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-card rounded-xl p-8 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
+              whileHover={{ y: -5, rotateX: 2, scale: 1.01 }}
+              className="glass-panel p-8 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,243,255,0.25)] border-t border-l border-white/20 rounded-3xl perspective-1000 transform-style-3d"
             >
               <div className="grid lg:grid-cols-3 gap-8">
                 {/* Left Column - Main Info */}
@@ -115,7 +116,7 @@ export default function Education() {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-foreground mb-2">{edu.degree}</h3>
                       <p className="text-primary font-semibold text-lg">{edu.institution}</p>
-                      
+
                       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-3 text-sm text-muted-foreground">
                         <div className="flex items-center">
                           <Calendar size={16} className="mr-2" />
@@ -130,13 +131,12 @@ export default function Education() {
                           {edu.gpa}
                         </div>
                       </div>
-                      
+
                       <div className="mt-3">
-                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                          edu.status === 'Currently Pursuing' 
-                            ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
-                            : 'bg-green-500/20 text-green-400 border border-green-500/30'
-                        }`}>
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${edu.status === 'Currently Pursuing'
+                          ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                          : 'bg-green-500/20 text-green-400 border border-green-500/30'
+                          }`}>
                           {edu.status}
                         </span>
                       </div>
@@ -211,22 +211,26 @@ export default function Education() {
               Academic Excellence
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto mb-6">
-              Throughout my academic journey, I have maintained consistent excellence with strong 
-              performance across all subjects. My education has provided me with a solid foundation 
-              in computer science, cybersecurity, and technology, preparing me for real-world challenges.
+              Throughout my academic journey, I have maintained consistent excellence with strong
+              performance across all subjects. My education has provided me with a solid foundation
+              in computer science, software architecture, and technology, preparing me for real-world development challenges.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">9.80</div>
                 <div className="text-sm text-muted-foreground">SSC GPA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">9.51</div>
-                <div className="text-sm text-muted-foreground">Intermediate GPA</div>
+                <div className="text-sm text-muted-foreground">Inter GPA</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">8.09</div>
+                <div className="text-sm text-muted-foreground">B.Tech CGPA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">2026</div>
-                <div className="text-sm text-muted-foreground">Expected Graduation</div>
+                <div className="text-sm text-muted-foreground">Graduation</div>
               </div>
             </div>
           </div>

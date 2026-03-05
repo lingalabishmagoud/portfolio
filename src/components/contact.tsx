@@ -44,7 +44,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -88,7 +88,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex flex-col items-center space-y-4 p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg group"
+                    className="flex flex-col items-center space-y-4 p-6 glass-panel hover:shadow-[0_0_20px_rgba(0,243,255,0.2)] transition-all duration-300 group"
                   >
                     <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Icon size={28} className="text-primary" />
@@ -124,7 +124,7 @@ export default function Contact() {
                       whileTap={{ scale: 0.95 }}
                       className="flex flex-col items-center space-y-3 group"
                     >
-                      <div className="w-20 h-20 rounded-xl bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center justify-center shadow-lg group-hover:shadow-xl">
+                      <div className="w-20 h-20 rounded-xl glass-panel hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center justify-center shadow-[0_0_15px_rgba(0,243,255,0.1)] group-hover:shadow-[0_0_25px_rgba(0,243,255,0.3)]">
                         <Icon size={32} className="transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       <div className="text-center">

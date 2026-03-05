@@ -6,47 +6,64 @@ import { ExternalLink, Github, Calendar, Code, Database } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
+      title: "CashTrackr – Personal Finance App",
+      description: "A comprehensive personal finance management app for Android developed to help users track daily expenditures, manage loans, and visualize financial habits.",
+      image: null,
+      technologies: ["Kotlin", "Jetpack Compose", "Android Studio", "SQLite/Room"],
+      features: [
+        "Track daily expenditures natively",
+        "Manage loans efficiently",
+        "Visualize financial habits",
+        "Modern Material Design 3 UI",
+        "Offline-first architecture"
+      ],
+      github: "https://github.com/lingalabishmagoud/CashTrackr",
+      demo: "#",
+      category: "Android Application",
+      status: "Completed",
+      duration: "Recent"
+    },
+    {
       title: "Student Management System",
-      description: "A comprehensive web application for managing student data with multi-role portal functionality including dashboards, attendance tracking, grades management, and discussion forums.",
+      description: "A secure, multi-role web portal with dashboards, session-based login, attendance, grades, and forums built to streamline institutional data.",
       image: null,
       technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap 5"],
       features: [
         "Secure session-based authentication",
-        "Multi-role dashboards (Student/Teacher/Admin)",
-        "Attendance management system",
+        "Multi-role user dashboards",
+        "Attendance management",
         "Grade tracking and reporting",
         "Discussion forums",
-        "Responsive design"
+        "Responsive cross-platform design"
       ],
-      github: "#",
+      github: "https://github.com/lingalabishmagoud/STUDENT-MANAGEMENT-SYSTEM",
       demo: "#",
-      category: "Web Application",
+      category: "Full-Stack Web App",
       status: "Completed",
       duration: "3 months"
     },
     {
       title: "Personal Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing my skills, projects, and experience with smooth animations and interactive elements.",
+      description: "A highly-modern, responsive portfolio website showcasing my skills, projects, and personal brand with state-of-the-art animations.",
       image: null,
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       features: [
-        "Responsive design",
-        "Smooth animations",
-        "Dark/Light theme",
-        "Contact form",
-        "SEO optimized",
-        "Fast loading"
+        "Interactive UI & animations",
+        "Optimized Framer Motion transitions",
+        "Responsive glassmorphic design",
+        "Dark/Light theme ready",
+        "SEO optimized architecture"
       ],
-      github: "https://github.com/lingalabishmagoud",
-      demo: "#",
-      category: "Portfolio",
+      github: "https://github.com/lingalabishmagoud/portfolio",
+      demo: "https://portfolio-inky-mu-qql5ylqib2.vercel.app/",
+      category: "Frontend Development",
       status: "Completed",
-      duration: "1 month"
+      duration: "Ongoing"
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background/50">
+    <section id="projects" className="py-20 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -71,21 +88,23 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl"
+              whileHover={{ y: -10, rotateX: 2, rotateY: -2 }}
+              className="glass-panel overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,243,255,0.3)] group/card perspective-1000 transform-style-3d border-t border-l border-white/20"
             >
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Project Image */}
-                <div className="relative h-64 lg:h-auto bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
+                <div className="relative h-64 lg:h-auto bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden group">
                   {project.image ? (
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
-                      <div className="text-center p-6">
-                        <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-primary/20 flex items-center justify-center">
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 overflow-hidden">
+                      <div className="absolute inset-0 bg-primary/5 transition-transform duration-700 group-hover:scale-110 blur-xl rounded-full opacity-0 group-hover:opacity-100" />
+                      <div className="text-center p-6 transition-transform duration-500 group-hover:scale-105 z-10">
+                        <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                           <Code size={32} className="text-primary" />
                         </div>
                         <h3 className="text-lg font-semibold text-foreground mb-2">{project.title}</h3>
@@ -99,11 +118,10 @@ export default function Projects() {
 
                   {/* Status Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === 'Completed'
-                        ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                        : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
-                    }`}>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === 'Completed'
+                      ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                      : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                      }`}>
                       {project.status}
                     </span>
                   </div>

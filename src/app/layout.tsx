@@ -49,17 +49,22 @@ export const metadata: Metadata = {
   },
 };
 
+import ThreeDBackground from "@/components/ThreeDBackground";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-black text-white`}
       >
-        {children}
+        <ThreeDBackground />
+        <div className="relative z-10 w-full h-full">
+          {children}
+        </div>
       </body>
     </html>
   );

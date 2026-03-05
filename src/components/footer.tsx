@@ -46,7 +46,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-background/80 backdrop-blur-md border-t border-border">
+    <footer className="glass-panel border-x-0 border-b-0 rounded-none relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-12">
@@ -61,7 +61,7 @@ export default function Footer() {
             >
               <h3 className="text-2xl font-bold text-primary">Lingala Bishma Goud</h3>
               <p className="text-muted-foreground max-w-sm">
-                Computer Science undergraduate passionate about frontend development, 
+                Computer Science undergraduate passionate about frontend development,
                 cybersecurity, and creating innovative web solutions.
               </p>
               <div className="flex space-x-4">
@@ -161,7 +161,7 @@ export default function Footer() {
               </motion.div>
               <span>and lots of ☕</span>
             </div>
-            
+
             <div className="flex items-center space-x-4">
               <span className="text-sm text-muted-foreground">
                 Built with Next.js & Tailwind CSS

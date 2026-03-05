@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Palette, Database, Globe, Shield, Users } from "lucide-react";
+import { Code, Palette, Database, Shield, Users, Webhook, Wand2 } from "lucide-react";
 
 export default function Skills() {
   const skillCategories = [
@@ -9,66 +9,66 @@ export default function Skills() {
       title: "Frontend Development",
       icon: Palette,
       skills: [
-        { name: "HTML5", level: 90 },
-        { name: "CSS3", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "Bootstrap 5", level: 85 },
+        { name: "HTML5 & CSS3", level: 95 },
+        { name: "React / Next.js", level: 85 },
+        { name: "Tailwind CSS", level: 90 },
+        { name: "Framer Motion", level: 80 },
       ]
     },
     {
-      title: "Programming Languages",
-      icon: Code,
-      skills: [
-        { name: "Python", level: 75 },
-        { name: "Java", level: 70 },
-        { name: "C", level: 75 },
-        { name: "PHP", level: 70 },
-      ]
-    },
-    {
-      title: "Web Development",
-      icon: Globe,
-      skills: [
-        { name: "UI Design", level: 80 },
-        { name: "Session Management", level: 75 },
-        { name: "Secure Login", level: 80 },
-        { name: "Responsive Design", level: 85 },
-      ]
-    },
-    {
-      title: "Tools & Technologies",
+      title: "Backend & Database",
       icon: Database,
       skills: [
-        { name: "Git", level: 80 },
-        { name: "GitHub", level: 85 },
-        { name: "VS Code", level: 90 },
-        { name: "MySQL", level: 70 },
+        { name: "MySQL", level: 85 },
+        { name: "PHP", level: 75 },
+        { name: "Node.js", level: 70 },
+        { name: "RESTful APIs", level: 80 },
       ]
     },
     {
-      title: "Cybersecurity",
-      icon: Shield,
+      title: "Android Architecture",
+      icon: Code,
       skills: [
-        { name: "Ethical Hacking", level: 65 },
-        { name: "Bug Tracing", level: 70 },
-        { name: "Vulnerability Assessment", level: 65 },
-        { name: "Secure Coding", level: 75 },
+        { name: "Kotlin", level: 85 },
+        { name: "Jetpack Compose", level: 80 },
+        { name: "Dart / Flutter", level: 75 },
+        { name: "Android Studio", level: 90 },
+      ]
+    },
+    {
+      title: "Version Control & DevOps",
+      icon: Webhook,
+      skills: [
+        { name: "Git", level: 95 },
+        { name: "GitHub Workflow", level: 90 },
+        { name: "Vercel Deployment", level: 85 },
+        { name: "AI Prompt Engineering", level: 90 },
+      ]
+    },
+    {
+      title: "Design & UI Tools",
+      icon: Wand2,
+      skills: [
+        { name: "Figma", level: 80 },
+        { name: "Responsive Design", level: 95 },
+        { name: "Glassmorphism UI", level: 90 },
+        { name: "Micro-Animations", level: 85 },
       ]
     },
     {
       title: "Soft Skills",
       icon: Users,
       skills: [
-        { name: "Communication", level: 85 },
-        { name: "Teamwork", level: 90 },
-        { name: "Adaptability", level: 85 },
-        { name: "Time Management", level: 80 },
+        { name: "Communication", level: 95 },
+        { name: "Team Lead & Collab", level: 90 },
+        { name: "Problem Solving", level: 95 },
+        { name: "Adaptability", level: 95 },
       ]
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-background">
+    <section id="skills" className="py-20 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -95,7 +95,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
+                className="glass-panel p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,243,255,0.2)]"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mr-4">
@@ -112,9 +112,9 @@ export default function Skills() {
                       key={skill.name}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ 
-                        duration: 0.5, 
-                        delay: categoryIndex * 0.1 + skillIndex * 0.05 
+                      transition={{
+                        duration: 0.5,
+                        delay: categoryIndex * 0.1 + skillIndex * 0.05
                       }}
                       viewport={{ once: true }}
                     >
@@ -131,8 +131,8 @@ export default function Skills() {
                           className="bg-gradient-to-r from-primary to-primary/70 h-2 rounded-full"
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
-                          transition={{ 
-                            duration: 1, 
+                          transition={{
+                            duration: 1,
                             delay: categoryIndex * 0.1 + skillIndex * 0.1,
                             ease: "easeOut"
                           }}
@@ -155,15 +155,15 @@ export default function Skills() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-8 border border-primary/20">
+          <div className="glass-panel p-8">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Always Learning
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               I&apos;m constantly expanding my skill set and staying up-to-date with the latest
-              technologies. Currently exploring advanced React concepts, Node.js backend 
-              development, and advanced cybersecurity practices to become a well-rounded 
-              full-stack developer.
+              technologies. Currently exploring advanced React concepts, scalable Node.js backend
+              architectures, and Jetpack Compose state management tricks to build premium, well-rounded
+              Full-Stack and Android applications.
             </p>
           </div>
         </motion.div>
